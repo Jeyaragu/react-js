@@ -1,2 +1,2 @@
-# react-js
-Contains all the react project with atomic design patter and redux
+Cart -> Product -> selected items not coming
+Try with useContext() for above issue

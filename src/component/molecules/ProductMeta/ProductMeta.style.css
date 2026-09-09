@@ -1,0 +1,12 @@
+.product-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.product-meta h3 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+}

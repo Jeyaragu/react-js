@@ -1,0 +1,23 @@
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 0.75rem;
+  transition: color 0.2s ease;
+}
+
+li a:visited {
+  color: #fff;
+}
+
+li a:hover {
+  color: #f0a500; /* hover color, adjust as needed */
+}
