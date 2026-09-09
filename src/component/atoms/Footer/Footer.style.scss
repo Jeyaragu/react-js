@@ -1,0 +1,13 @@
+$primary-text: #ffffff;
+footer {
+  bottom: 20px;
+  color: rgba($primary-text, 0.7);
+  font-size: 13px;
+  left: 16px;
+  position: absolute;
+  right: 16px;
+  text-align: center;
+  p {
+    margin: 0;
+  }
+}

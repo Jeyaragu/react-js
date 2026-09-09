@@ -1,0 +1,155 @@
+$canvas-start: #2d5d67;
+$canvas-end: #102a35;
+$card-face: #111e25;
+$input-track: #d9d9d9;
+$accent: #4f7988;
+$primary-text: #ffffff;
+
+.login-page {
+  background: radial-gradient(circle, $canvas-start 0%, $canvas-end 100%);
+  position: relative;
+
+  > footer {
+    bottom: 24px;
+    color: rgba($primary-text, 0.7);
+    font-size: 13px;
+    left: 16px;
+    position: absolute;
+    right: 16px;
+    text-align: center;
+    p {
+      margin: 0;
+    }
+  }
+}
+
+.login-card {
+  background: $card-face;
+  border: 1px solid rgba($primary-text, 0.12);
+  border-radius: 8px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  color: $primary-text;
+  gap: 22px;
+  padding: 42px;
+  width: min(100%, 420px);
+
+  .login-heading {
+    margin-bottom: 4px;
+  }
+
+  .login-kicker {
+    color: #8db7c1;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    margin: 0 0 10px;
+  }
+
+  .login-heading h1 {
+    font-size: 30px;
+    margin: 0 0 8px;
+  }
+
+  .login-heading p:not(.login-kicker) {
+    color: rgba($primary-text, 0.7);
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  .form-label,
+  .remember-option {
+    color: $primary-text;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .input-control {
+    position: relative;
+
+    .form-control {
+      background: $input-track;
+      border: 2px solid transparent;
+      border-radius: 5px;
+      color: $card-face;
+      height: 46px;
+      padding: 0 14px;
+
+      &:focus {
+        border-color: $accent;
+        box-shadow: none;
+      }
+
+      &::placeholder {
+        color: #5c666b;
+      }
+    }
+  }
+
+  .form-group:has(.password-visibility) .form-control {
+    padding-right: 50px;
+  }
+
+  .password-visibility {
+    align-items: center;
+    background: transparent;
+    border: 0;
+    color: #34474f;
+    display: flex;
+    font-size: 18px;
+    height: 46px;
+    justify-content: center;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 46px;
+
+    &:focus-visible {
+      outline: 2px solid $accent;
+      outline-offset: -4px;
+    }
+  }
+
+  .form-check-input {
+    accent-color: $accent;
+    cursor: pointer;
+    height: 16px;
+    width: 16px;
+
+    &:checked {
+      background-color: $accent;
+      border-color: $accent;
+    }
+  }
+
+  .remember-option {
+    cursor: pointer;
+  }
+
+  .login-submit {
+    background: $accent;
+    border-color: $accent;
+    font-weight: 700;
+    height: 48px;
+    letter-spacing: 0.3px;
+
+    &:hover {
+      background: #5b8999;
+      border-color: #5b8999;
+    }
+
+    &:focus-visible {
+      box-shadow: 0 0 0 3px rgba($primary-text, 0.45);
+    }
+  }
+}
+.error-message {
+  color: #ff4d4f;
+  font-size: 12px;
+}
+@media (max-width: 480px) {
+  .login-card {
+    padding: 32px 24px;
+  }
+}

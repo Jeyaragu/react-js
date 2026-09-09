@@ -1,0 +1,102 @@
+.employee-directory {
+  --directory-bg: #ffffff;
+  --directory-text: #212529;
+  --directory-muted: #6c757d;
+  --directory-border: #dee2e6;
+  --directory-row-hover: #f8f9fa;
+  --directory-header-bg: #f1f3f5;
+
+  background: var(--directory-bg);
+  color: var(--directory-text);
+  padding: 1.5rem;
+
+  .employee-directory-header {
+    margin-bottom: 1.25rem;
+  }
+
+  .employee-directory-table-wrapper {
+    background: var(--directory-bg);
+    border: 1px solid var(--directory-border);
+    border-radius: 0.5rem;
+    overflow-x: auto;
+  }
+
+  .employee-directory-table {
+    margin-bottom: 0;
+    color: var(--directory-text);
+
+    thead th {
+      background: var(--directory-header-bg);
+      color: var(--directory-muted);
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      border-bottom: 1px solid var(--directory-border);
+    }
+
+    tbody tr {
+      border-bottom: 1px solid var(--directory-border);
+
+      &:hover {
+        background: var(--directory-row-hover);
+      }
+    }
+
+    .employee-row-profile {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .employee-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .employee-row-details {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .employee-name {
+      font-weight: 600;
+    }
+
+    .employee-email {
+      color: var(--directory-muted);
+      font-size: 0.85rem;
+    }
+  }
+
+  .employee-directory-message {
+    padding: 1.5rem;
+    text-align: center;
+    color: var(--directory-muted);
+    margin: 0;
+  }
+
+  .employee-directory-loader {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    min-height: 180px;
+    width: 100%;
+  }
+
+  .employee-directory-error {
+    color: #dc3545;
+  }
+}
+
+[data-theme="dark"] .employee-directory,
+.dark-theme .employee-directory,
+body.dark .employee-directory {
+  --directory-bg: #111e25;
+  --directory-text: #e4ebf5;
+  --directory-muted: #9aa5b1;
+  --directory-border: rgba(255, 255, 255, 0.12);
+  --directory-row-hover: rgba(255, 255, 255, 0.04);
+  --directory-header-bg: rgba(255, 255, 255, 0.06);
+}
